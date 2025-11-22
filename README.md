@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔗 TinyLink
 
-## Getting Started
+![TinyLink Banner](https://placehold.co/1200x400/1a1a1a/ffffff?text=TinyLink)
 
-First, run the development server:
+> **The Premium URL Shortener for Modern Needs.**
+> Built with Next.js 16, Tailwind CSS 4, and Prisma.
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Prisma](https://img.shields.io/badge/Prisma-5.0-2D3748?style=for-the-badge&logo=prisma)](https://prisma.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+## ✨ Features
+
+- **🚀 Blazing Fast Redirects**: Optimized routing for instant link navigation.
+- **📊 Detailed Analytics**: Track clicks, timestamps, and engagement.
+- **🎨 Premium UI**: A stunning, dark-themed interface with smooth animations.
+- **🔗 Custom Short Codes**: Create memorable vanity URLs (e.g., `/google`).
+- **📱 Fully Responsive**: Works perfectly on desktop, tablet, and mobile.
+- **🛡️ Type Safe**: Built with TypeScript and Zod for robust validation.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Database**: [PostgreSQL](https://www.postgresql.org/) (via [Neon](https://neon.tech/))
+- **ORM**: [Prisma](https://prisma.io/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- PostgreSQL Database (Local or Neon)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/tinylink.git
+   cd tinylink
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment**
+   Create a `.env` file in the root directory:
+   ```env
+   DATABASE_URL="postgresql://user:password@host:port/db?sslmode=require"
+   ```
+
+4. **Setup Database**
+   ```bash
+   npx prisma migrate dev
+   ```
+
+5. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 📖 API Documentation
+
+TinyLink provides a RESTful API for programmatic access.
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/api/links` | Create a new short link |
+| `GET` | `/api/links` | List all links |
+| `GET` | `/api/links/:code` | Get stats for a specific link |
+| `DELETE` | `/api/links/:code` | Delete a link |
+| `GET` | `/healthz` | Health check endpoint |
+
+### Example: Create a Link
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+curl -X POST http://localhost:3000/api/links \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://google.com", "code": "google"}'
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Easily deploy to [Vercel](https://vercel.com/):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push your code to GitHub.
+2. Import the project in Vercel.
+3. Add your `DATABASE_URL` to Vercel Environment Variables.
+4. Deploy!
 
-## Learn More
+See [deployment_guide.md](./deployment_guide.md) for detailed instructions.
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
