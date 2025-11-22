@@ -26,7 +26,7 @@ export async function GET(
             },
         })
 
-        return NextResponse.redirect(link.originalUrl)
+        return NextResponse.redirect(link.originalUrl, { status: 302 })
     } catch (error) {
         console.error('Redirect error:', error)
         return new NextResponse('Internal Server Error', { status: 500 })
