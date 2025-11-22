@@ -1,6 +1,6 @@
 # 🔗 TinyLink
 
-![TinyLink Banner](https://placehold.co/1200x400/1a1a1a/ffffff?text=TinyLink)
+![TinyLink Banner](https://https://tiny-url-link-75ad4md32-armaan-sharmas-projects-e257b955.vercel.app/k)
 
 > **The Premium URL Shortener for Modern Needs.**
 > Built with Next.js 16, Tailwind CSS 4, and Prisma.
@@ -40,8 +40,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/tinylink.git
-   cd tinylink
+   git clone https://github.com/armaansharmaa/TinyLink.git
+   cd TinyLink
    ```
 
 2. **Install dependencies**
@@ -95,8 +95,6 @@ Easily deploy to [Vercel](https://vercel.com/):
 2. Import the project in Vercel.
 3. Add your `DATABASE_URL` to Vercel Environment Variables.
 4. Deploy!
-
-See [deployment_guide.md](./deployment_guide.md) for detailed instructions.
 
 ## 🤝 Contributing
 
