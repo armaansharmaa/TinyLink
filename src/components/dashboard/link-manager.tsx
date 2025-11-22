@@ -147,6 +147,11 @@ export function LinkManager({ initialLinks }: { initialLinks: SerializedLink[] }
                                             <div className="flex items-center gap-4 text-xs text-muted-foreground mt-1">
                                                 <span className="flex items-center gap-1"><BarChart2 className="h-3 w-3" /> {link.clicks} clicks</span>
                                                 <span>{new Date(link.createdAt).toLocaleDateString()}</span>
+                                                {link.lastClickedAt && (
+                                                    <span className="hidden sm:inline border-l pl-4 border-border/50">
+                                                        Last clicked: {new Date(link.lastClickedAt).toLocaleDateString()}
+                                                    </span>
+                                                )}
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-2">
